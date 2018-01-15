@@ -1,0 +1,9 @@
+microservice:
+  customer:
+    host: http://localhost:8080
+    
+stubrunner:
+#  repositoryRoot: http://nexus.paradigmadigital.com/content/repositories/snapshots
+  workOffline: true
+  ids:
+    - com.example.contract:customer:+:stubs:8080

@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: account-manager
+    
+server:
+  port: 8081
+  
+microservice:
+  customer:
+    host: http://localhost:8080
