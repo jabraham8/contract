@@ -3,9 +3,9 @@
  */
 package com.example.contract.controller;
 
+import static org.apache.http.HttpStatus.SC_INTERNAL_SERVER_ERROR;
 import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 
-import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +41,7 @@ public class AccountController {
 	@ApiOperation(value = "Create an account", notes = "Creates an account with all of its associated elements like "
 			+ "customer, security configurations, personal settings")
 	@ApiResponses({
-		@ApiResponse(code = HttpStatus.SC_INTERNAL_SERVER_ERROR , message = "There was an error")
+		@ApiResponse(code = SC_INTERNAL_SERVER_ERROR , message = "There was an error")
 	})
 	@ResponseStatus(org.springframework.http.HttpStatus.CREATED)
 	public Account createAccount(@RequestBody Account account) {

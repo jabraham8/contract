@@ -36,8 +36,6 @@
 			<artifactId>springfox-swagger2</artifactId>
 			<version>${io.springfox.swagger.version}</version>
 		</dependency>
-		<!-- TODO: Consider put the swagger-ui server in a centralized MS and import 
-			definitions -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
@@ -64,6 +62,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-contract-stub-runner</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -71,6 +70,10 @@
 			<version>1.16.18</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -87,7 +90,6 @@
 
 	<build>
 		<plugins>
-			<!-- Spring Cloud Contract Verifier Plugin -->
 			<plugin>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
