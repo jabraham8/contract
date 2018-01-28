@@ -89,7 +89,6 @@
 
 	<!-- <build>
 		<plugins>
-			Spring Cloud Contract Verifier Plugin
 			<plugin>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
